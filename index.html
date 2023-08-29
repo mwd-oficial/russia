@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/lands.css" media="screen and (orientation:landscape)">
+    <title>Rússia: Aspectos Econômicos</title>
+</head>
+
+<body onload="inicia()">
+    <div id="carregando">
+        <div style="margin: 20px 0px;" id="carregar"></div>
+        <p id="pcarregar">Carregando...</p>
+    </div>
+    <div id="conteudo">
+        <p id="nomes">Feito por: Mateus Gonçalves, Amanda, João Pedro, Felipe Andrade, Felipe Valim, Gabriel Batarra e
+            Miguel Pádua</p>
+            <div id="video-btn-cell" onclick="btnControl()"><span class="material-symbols-rounded">visibility</span>Assistir vídeo</div>
+            <div id="vire"><span class="material-symbols-rounded">
+                screen_rotation
+                </span><p>Vire o celular</p></div>
+        <div id="divVideo">
+            <video autoplay loop muted playsinline id="video" onclick="aparecerControle()"
+                onmousemove="aparecerControle()">
+                <source src="videos/russia.webm">
+            </video>
+            <button id="playPauseButtonc" onclick="togglePlayPause();aparecerControle()"><span
+                    class="material-symbols-rounded">pause</span></button>
+            <div id="video-controls">
+                <div id="div-pp-tmp">
+                        <div id="pausetmp">
+                            <button id="playPauseButton" onclick="togglePlayPause();aparecerControle()"><span
+                                    class="material-symbols-rounded">pause</span></button>
+                            <div id="timeContainer">
+                                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        <div id="tela-cheia" onclick="toggleFullscreen()"><span class="material-symbols-rounded">fullscreen</span></div>
+                </div>
+                <input type="range" id="progressBar" min="0" step="0.01" value="0"
+                    onchange="seekVideo();aparecerControle()">
+            </div>
+        </div>
+        <div id="video-btn" onclick="btnControl()"><span class="material-symbols-rounded">visibility</span>
+            <div id="video-btn-after">Assistir vídeo</div>
+        </div>
+
+        <div onclick="prev()" id="div-seta1" class="div-seta desativado"><span
+                class="material-symbols-rounded seta">arrow_left</span></div>
+        <div onclick="next()" id="div-seta2" class="div-seta"><span
+                class="material-symbols-rounded seta">arrow_right</span></div>
+
+        <div class="div-titulo" id="div-titulo1">
+            <h1 id="h1russia">Aspectos Econômicos <br> da Rússia</h1>
+        </div>
+        <div onclick="abrir(1)" class="div-titulo">
+            <h1>Agricultura</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(1)">close</span>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    <h2>teste titulo 1</h2>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    <img src="imagens/bandeira-espanha.webp" alt="">
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
+                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
+                    dignissimos voluptatem porro obcaecati ut modi.
+                </p>
+            </div>
+        </div>
+        <div onclick="abrir(2)" class="div-titulo">
+            <h1>Pecuária</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(2)">close</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
+                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
+                        Omnis.</p>
+            </div>
+        </div>
+        <div onclick="abrir(3)" class="div-titulo" id="recener">
+            <h1>Recursos Energéticos</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(3)">close</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
+                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
+                        Omnis.</p>
+            </div>
+        </div>
+        <div onclick="abrir(4)" class="div-titulo">
+            <h1>Indústria</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(4)">close</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
+                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
+                        Omnis.</p>
+            </div>
+        </div>
+        <div onclick="abrir(5)" class="div-titulo">
+            <h1>População</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(5)">close</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
+                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
+                        Omnis.</p>
+            </div>
+        </div>
+        <div onclick="abrir(6)" class="div-titulo">
+            <h1>Conflitos</h1>
+            <div class="div-interna">
+                <span class="material-symbols-rounded" id="x" onclick="fecharCell(6)">close</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
+                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
+                        Omnis.</p>
+            </div>
+        </div>
+        <div id="menu-cell">
+            <div onclick="prev()" id="div-seta1-cell" class="div-seta-cell desativado"><span
+                    class="material-symbols-rounded seta-cell">arrow_left</span></div>
+            <a href="https://github.com/mwd-oficial" target="_blank"><img src="imagens/logoMWDt.png" alt=""></a>
+            <div onclick="next()" id="div-seta2-cell" class="div-seta-cell"><span
+                    class="material-symbols-rounded seta-cell">arrow_right</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

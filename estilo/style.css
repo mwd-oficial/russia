@@ -1,0 +1,464 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 2000px;
+}
+
+body,
+html {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#conteudo {
+    display: none;
+}
+
+#carregando, #vire {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    min-width: 200px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#carregar {
+    background-color: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: preload .5s linear infinite;
+}
+
+#pcarregar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
+    margin: 0;
+}
+
+@keyframes preload {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#nomes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 0px;
+    width: 100vw;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+
+#divVideo {
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#video {
+    height: 100vh;
+}
+
+#vire {
+    z-index: 200;
+    gap: 10px;
+    display: none;
+}
+
+#vire p {
+    font-weight: bolder;
+}
+
+#vire span {
+    font-size: 50px;
+}
+
+#video-btn, #video-btn-after {
+    display: none;
+}
+
+#video-btn-cell {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 40px;
+    width: 100vw;
+    font: 12px;
+    padding: 0 20px 0 30px;
+    background-color: #fff;
+    z-index: 300;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
+    border-radius: 100000px;
+    transform: none;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+#video-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, #000, transparent);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: .5s;
+    display: none;
+}
+
+#video-controls:hover, #video-controls:hover ~ #playPauseButtonc, #playPauseButtonc:hover, #playPauseButtonc:hover ~ #video-controls  {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+#div-pp-tmp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Personalizar o slider */
+input[type="range"] {
+    appearance: none;
+    background-color: transparent;
+    width: 100%;
+    margin: 7px 0;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 3px;
+    border: 0.2px solid #010101;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -7.5px;
+}
+
+#pausetmp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#playPauseButton, #tela-cheia {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition-duration: .5s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#playPauseButton:hover, #tela-cheia:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#playPauseButtonc:hover {
+    transform: scale(1.2) translate(-40%, -40%);
+    background-color: rgba(0, 0, 0, .6);
+}
+
+#playPauseButtonc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px !important;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    transition-duration: .5s;
+    display: none;
+}
+
+#playPauseButtonc span {
+    font-size: 50px;    
+}
+
+.div-titulo p {
+    display: none;
+}
+
+#recener {
+    width: 70vw;
+}
+
+.div-titulo {
+    width: 40vw;
+    height: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition-duration: .5s;
+    animation: zoom 1s ease infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.div-seta {
+    display: none;
+}
+
+#div-titulo1 {
+    background-color: transparent;
+    display: flex;
+    width: 90vw;
+    height: 50vh;
+    padding: 0px;
+    text-align: center;
+    animation: none;
+    cursor: default;
+}
+
+#h1russia {
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 
+               -2px -2px 0px #000, 
+               -2px 2px 0px #000,                    
+                2px -2px 0px #000,                  
+                2px 2px 0px #000,
+                0px 0px 20px #000;
+}
+
+.abrir-texto {
+    position: relative;
+    background-color: rgb(255, 255, 255, .3);
+    backdrop-filter: blur(20px);
+    display: block !important;
+    border-radius: 0;
+    padding: 20px 10px;
+    width: 100vw !important;
+    height: 100vh;
+    overflow: hidden;
+    animation: none;
+    line-height: 25px;
+    z-index: 400;
+    cursor: default;
+}
+
+.div-interna {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    transition-duration: .5s;
+    overflow-y: scroll;
+    animation: none;
+    display: none;
+    opacity: 0;
+}
+
+#x {
+    position: sticky;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .5);
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.div-titulo h1 {
+    font-size: 1.5em;
+    transition-duration: .5s;
+}
+
+.abrir-texto p {
+    text-align: justify;
+    transition-duration: .5s;
+    display: block;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+img {
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#menu-cell {
+    background-color: #fff;
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#menu-cell a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-cell a img {
+    width: 75px;
+}
+
+.div-seta-cell {
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+.seta-cell {
+    font-size: 40px;
+}
+
+.desativado {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#logoMWD {
+    display: none;
+}
