@@ -202,9 +202,9 @@ function next() {
     divSeta1Cell.classList.remove("desativado");
     for (let i = 0; i < divTitulos.length; i++) {
         divTitulos[i].classList.remove("abrir-texto")
-        //divInterna[i].style.opacity = 0
+        divInterna[i].style.opacity = 0
         divTextoH1[i].style.display = "block"
-        //divInterna[i].style.display = "none"
+        divInterna[i].style.display = "none"
         setTimeout(() => {
             divTextoH1[i].style.opacity = 1
         }, 500);
