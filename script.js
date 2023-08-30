@@ -152,14 +152,13 @@ function aparecerControle() {
     }, 1);
     clearTimeout(videoElement.timeoutId)
     videoElement.timeoutId = setTimeout(() => {
-        if (isPlaying === false) {
             playPauseButtonc.style.opacity = 0
             videoControls.style.opacity = 0
             setTimeout(() => {
                 playPauseButtonc.style.display = "none"
                 videoControls.style.display = "none"
             }, 500);
-        }
+        
     }, 1000);
 }
 

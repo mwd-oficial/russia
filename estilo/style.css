@@ -7,11 +7,6 @@
     box-sizing: border-box;
 }
 
-::selection {
-    background-color: transparent;
-    color: inherit;
-}
-
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -23,6 +18,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: #555;
     border-radius: 2000px;
+}
+
+::selection {
+    background-color: transparent;
+    color: inherit;
 }
 
 body,
