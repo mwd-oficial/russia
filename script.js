@@ -66,7 +66,7 @@ function btnControl() {
         playPauseButtoncs.innerHTML = "pause";
     } else {
         vire.style.display = "flex"
-        videoBtnCell.innerHTML = "<span class='material-symbols-rounded'>visibility</span>Parar de assistir"
+        videoBtnCell.innerHTML = "<span class='material-symbols-rounded'>visibility_off</span>Parar de assistir"
         videoBtnAfter.innerHTML = "Parar de assistir"
         videoBtnAfter.style.justifyContent = "end"
         videoBtn.innerHTML = "visibility_off"
