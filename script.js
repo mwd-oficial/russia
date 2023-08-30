@@ -107,32 +107,40 @@ document.addEventListener("fullscreenchange", function() {
     isFullscreen = !isFullscreen;
     if (isFullscreen) {
         divVideo.classList.add("fullscreen");
+        telaCheia.innerHTML = "fullscreen_exit"
     } else {
         divVideo.classList.remove("fullscreen");
+        telaCheia.innerHTML = "fullscreen"
     }
 });
 document.addEventListener("webkitfullscreenchange", function() {
     isFullscreen = !isFullscreen;
     if (isFullscreen) {
         divVideo.classList.add("fullscreen");
+        telaCheia.innerHTML = "fullscreen_exit"
     } else {
         divVideo.classList.remove("fullscreen");
+        telaCheia.innerHTML = "fullscreen"
     }
 });
 document.addEventListener("mozfullscreenchange", function() {
     isFullscreen = !isFullscreen;
     if (isFullscreen) {
         divVideo.classList.add("fullscreen");
+        telaCheia.innerHTML = "fullscreen_exit"
     } else {
         divVideo.classList.remove("fullscreen");
+        telaCheia.innerHTML = "fullscreen"
     }
 });
 document.addEventListener("MSFullscreenChange", function() {
     isFullscreen = !isFullscreen;
     if (isFullscreen) {
         divVideo.classList.add("fullscreen");
+        telaCheia.innerHTML = "fullscreen_exit"
     } else {
         divVideo.classList.remove("fullscreen");
+        telaCheia.innerHTML = "fullscreen"
     }
 });
 
