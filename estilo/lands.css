@@ -107,6 +107,11 @@
     height: 80vh;
     cursor: pointer;
 }
+
+img {
+    width: 80%;
+}
+
 .div-seta {
     position: absolute;
     top: 50%;

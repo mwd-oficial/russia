@@ -397,20 +397,31 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: justify;
     transition-duration: .5s;
     display: block;
+    margin-bottom: 20px;
 }
 
 h2 {
     text-transform: uppercase;
     margin: 20px;
     text-align: center;
-    color: yellow;
+    color: #fff;
+     text-shadow: 
+               -2px -2px 0px #000, 
+               -2px 2px 0px #000,                    
+                2px -2px 0px #000,                  
+                2px 2px 0px #000,
+                0px 0px 20px #000;
 }
 
 img {
     display: block;
-    max-width: 400px;
-    width: 80%;
+    max-width: 500px;
+    width: 100%;
     margin: 20px auto;
+}
+
+.img90 {
+    min-width: 90%
 }
 
 #menu-cell {

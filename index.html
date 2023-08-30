@@ -20,10 +20,13 @@
     <div id="conteudo">
         <p id="nomes">Feito por: Mateus Gonçalves, Amanda, João Pedro, Felipe Andrade, Felipe Valim, Gabriel Batarra e
             Miguel Pádua</p>
-            <div id="video-btn-cell" onclick="btnControl()"><span class="material-symbols-rounded">visibility</span>Assistir vídeo</div>
-            <div id="vire"><span class="material-symbols-rounded">
+        <div id="video-btn-cell" onclick="btnControl()"><span class="material-symbols-rounded">visibility</span>Assistir
+            vídeo</div>
+        <div id="vire"><span class="material-symbols-rounded">
                 screen_rotation
-                </span><p>Vire o celular</p></div>
+            </span>
+            <p>Vire o celular</p>
+        </div>
         <div id="divVideo">
             <video autoplay loop muted playsinline id="video" onclick="aparecerControle()"
                 onmousemove="aparecerControle()">
@@ -33,14 +36,15 @@
                     class="material-symbols-rounded">pause</span></button>
             <div id="video-controls">
                 <div id="div-pp-tmp">
-                        <div id="pausetmp">
-                            <button id="playPauseButton" onclick="togglePlayPause();aparecerControle()"><span
-                                    class="material-symbols-rounded">pause</span></button>
-                            <div id="timeContainer">
-                                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-                            </div>
+                    <div id="pausetmp">
+                        <button id="playPauseButton" onclick="togglePlayPause();aparecerControle()"><span
+                                class="material-symbols-rounded">pause</span></button>
+                        <div id="timeContainer">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
                         </div>
-                        <div id="tela-cheia" onclick="toggleFullscreen()"><span class="material-symbols-rounded">fullscreen</span></div>
+                    </div>
+                    <div id="tela-cheia" onclick="toggleFullscreen()"><span
+                            class="material-symbols-rounded">fullscreen</span></div>
                 </div>
                 <input type="range" id="progressBar" min="0" step="0.01" value="0"
                     onchange="seekVideo();aparecerControle()">
@@ -56,124 +60,167 @@
                 class="material-symbols-rounded seta">arrow_right</span></div>
 
         <div class="div-titulo" id="div-titulo1">
-            <h1 id="h1russia">Aspectos Econômicos <br> da Rússia</h1>
+            <h1 id="h1russia">Rússia: <br> Aspectos Econômicos</h1>
         </div>
         <div onclick="abrir(1)" class="div-titulo">
             <h1>Agricultura</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(1)">close</span>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    <h2>teste titulo 1</h2>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    <img src="imagens/bandeira-espanha.webp" alt="">
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error temporibus esse dolores, corrupti
-                    cumque vero laudantium quod doloremque maiores ducimus eaque, deleniti quibusdam explicabo
-                    dignissimos voluptatem porro obcaecati ut modi.
+                    A Rússia é uma das maiores produtoras de grãos do mundo. <strong>
+                        Os produtos mais produzidos são trigos,
+                        centeio,
+                        aveia, cevada, milho, batata, vegetais, beterraba açucareira, linho e algodão, sendo famosa
+                        também
+                        pela produção de vodca.
+                    </strong> Ela tem uma gama de climas que variam de
+                    subártico no Norte a temperado no centro e árido no sul. Isso influencia nos tipos de culturas que
+                    podem ser cultivadas em diferentes regiões. As regiões mais férteis estão no sul, como a região do
+                    Cáucaso do Norte e a
+                    Ucrânia Ocidental.
                 </p>
+                <img src="imagens/clima.png" alt="" class="img90">
+                <p>
+                    A agricultura na Rússia enfrenta vários desafios, incluindo <strong>
+                        variações climáticas extremas,
+                        infraestrutura e tecnologia inadequadas, problemas relacionados à propriedade da terra e à
+                        vastidão territorial,
+                    </strong> o que limitam o crescimento do setor. Por isso, grandes áreas são
+                    incultiváveis, e as restrições impostas pelo clima severo
+                    forçam a Rússia a ser parcialmente dependente de grãos importados. É exportado uma variedade de
+                    produtos agrícolas para
+                    outros países, incluindo grãos, carne e lácteos, desempenhando um papel importante na economia
+                    russa.
+                </p>
+                <img src="imagens/trigo.jpg" alt="">
+
             </div>
         </div>
         <div onclick="abrir(2)" class="div-titulo">
             <h1>Pecuária</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(2)">close</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
-                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
-                        Omnis.</p>
+                <p><strong>A pecuária, incluindo a criação de gado, ovinos e aves, é uma parte significativa da economia
+                        russa</strong>, desempenhando um papel significativo na economia e produção de alimentos do país
+                    e é um dos maiores produtores mundiais.
+                    As vastas pastagens da Sibéria e outras regiões permitem a criação extensiva de animais. No entanto,
+                    a eficiência da produção muitas vezes é baixa devido à falta de investimentos em tecnologia e
+                    infraestrutura.</p>
+                <img src="imagens/gado.jpg" alt="">
+                <p>
+                    O grande território russo permite criação de gado em
+                    diversos lugares, embora o clima rigoroso possa ser um problema, existem áreas mais quentes e
+                    adequadas ao sul. O país também é um grande exportador de carne, especialmente para países vizinhos
+                    e mercados internacionais.
+                </p>
             </div>
         </div>
         <div onclick="abrir(3)" class="div-titulo" id="recener">
             <h1>Recursos Energéticos</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(3)">close</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
-                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
-                        Omnis.</p>
+                <p><strong>
+                        A Rússia é o principal exportador e segundo
+                        maior produtor de gás natural do mundo, bem como o segundo maior exportador e
+                        terceiro maior produtor de petróleo.
+                    </strong> Mais do que isso, desde o final da União
+                    Soviética, o Estado russo soube de forma muito hábil converter sua pujança
+                    energética numa ferramenta para expandir sua influência no cenário global. </p>
+                <img src="imagens/recursos.png" alt="">
+                <p>O país é o maior exportador de energia e, em alguns momentos da história, foi o
+                    maior produtor de petróleo. <strong>
+                        A Rússia detém a maior reserva de gás e a sétima maior
+                        reserva de petróleo.
+                    </strong> Isso já justifica uma atenção especial à sua experiência. Empresas como a Gazprom e a
+                    Rosneft desempenham um papel fundamental nesse setor de energia.</p>
+                <p>No que diz respeito à posição geográfica, é importante lembrar que o país se situa
+                    entre dois grandes mercados compradores de energia: a União Europeia (UE) e os
+                    asiáticos (China, Japão e Índia).</p>
+                <p>A Rússia se destaca no cenário mundial por conta da produção de petróleo e da
+                    exportação de gás natural. A venda desses combustíveis fósseis tem contribuído
+                    para a retomada da economia russa e para a reconstrução de seu poderio militar
+                    nas últimas duas décadas, período no qual Putin se consolidou na presidência.Os
+                    países europeus estão entre os maiores importadores de combustíveis fósseis
+                    russos. O destaque é o gás natural, muito importante para geração de eletricidade,
+                    funcionamento das fábricas e sistemas de calefação, fundamentais no inverno
+                    rigoroso do continente. </p>
             </div>
         </div>
         <div onclick="abrir(4)" class="div-titulo">
             <h1>Indústria</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(4)">close</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
-                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
-                        Omnis.</p>
+                <p>A indústria na Rússia é diversificada e inclui setores como <strong>manufatura, mineração,
+                        metalurgia, engenharia e construção naval.</strong> A indústria de defesa também tem uma
+                    presença significativa. A herança industrial da era soviética deixou um legado de infraestrutura
+                    pesada, mas muitas vezes desatualizada. O país tem feito esforços para modernizar suas indústrias e
+                    atrair investimentos estrangeiros, mas ainda há desafios em termos de burocracia e corrupção.</p>
+                <img src="imagens/industria.jpg" alt="">
+                <p><strong>Indústria Aeroespacial:</strong> A Rússia tem uma longa tradição na indústria aeroespacial,
+                    produzindo foguetes, satélites e aeronaves, além de ser o lar da agência espacial Roscosmos.</p>
+                <p><strong>Indústria de Defesa:</strong> A Rússia tem uma indústria de defesa robusta, produzindo uma
+                    variedade de equipamentos militares, incluindo tanques, aeronaves e sistemas de mísseis.</p>
+                <p><strong>Indústria Automobilística:</strong> A Rússia tem sua própria indústria automobilística, com
+                    empresas como a AvtoVAZ (fabricante do Lada) e várias montadoras estrangeiras que têm presença no
+                    mercado russo.</p>
             </div>
         </div>
         <div onclick="abrir(5)" class="div-titulo">
             <h1>População</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(5)">close</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
-                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
-                        Omnis.</p>
+                <p>A Rússia tem uma população relativamente grande, porém está enfrentando um problema de envelhecimento
+                    demográfico e diminuição da população devido a uma baixa taxa de natalidade e emigração. Isso tem
+                    implicações para a força de trabalho e a sustentabilidade dos sistemas de seguridade social. Além
+                    disso, a população russa está geograficamente dispersa, com uma concentração significativa nas áreas
+                    ocidentais, enquanto vastas regiões como a Sibéria têm densidade populacional baixa.</p>
+                <img src="imagens/populacao.png" alt="" class="img90">
             </div>
         </div>
         <div onclick="abrir(6)" class="div-titulo">
             <h1>Conflitos</h1>
             <div class="div-interna">
                 <span class="material-symbols-rounded" id="x" onclick="fecharCell(6)">close</span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum at alias, facere error vel, ea
-                        non saepe nihil distinctio esse eos rem, nisi exercitationem quaerat ab fuga perspiciatis unde.
-                        Omnis.</p>
+                <p><strong>Guerra Napoleônica (1812):</strong> A Rússia enfrentou a invasão das forças de Napoleão
+                    Bonaparte, que resultou em uma retirada catastrófica das tropas francesas em meio ao rigoroso
+                    inverno russo.</p>
+                <p><strong>A Primeira Guerra Mundial (1914 a 1918):</strong> foi um conflito global envolvendo as
+                    principais potências europeias. Iniciada após o assassinato do arquiduque Francisco Ferdinando da
+                    Áustria, a guerra se expandiu rapidamente com alianças complexas. As trincheiras e táticas de guerra
+                    modernas causaram enorme sofrimento e morte. O conflito resultou na queda de impérios, mudanças
+                    territoriais significativas e, em 1919, no Tratado de Versalhes, que impôs pesadas reparações à
+                    Alemanha, semeando sementes para futuros conflitos.</p>
+                <p><strong>Revolução Russa (1917-1923):</strong> Uma série de conflitos, incluindo a Revolução de
+                    Fevereiro e a Revolução de Outubro, levaram à queda da monarquia e à ascensão do governo comunista
+                    liderado pelos bolcheviques, que eventualmente resultou na formação da União Soviética.</p>
+                    <img src="imagens/urss.png" alt="">
+                <p><strong>Segunda Guerra Mundial (1939-1945):</strong> A União Soviética, que incluía a Rússia, foi
+                    invadida pela Alemanha Nazista em 1941, levando à Frente Oriental da guerra. As batalhas na Frente
+                    Oriental foram algumas das mais brutais e mortais da história.</p>
+                <p><strong>Guerra Fria (1947 - 1991):</strong> foi um conflito geopolítico e ideológico entre os Estados
+                    Unidos e seus aliados ocidentais e a União Soviética com seus aliados do bloco oriental, que durou
+                    aproximadamente de 1947 a 1991. Caracterizada pela rivalidade, corrida armamentista e confronto
+                    indireto, a Guerra Fria não envolveu combates diretos entre as superpotências, mas resultou na
+                    divisão do mundo em blocos, com disputas ideológicas e competição por influência global, culminando
+                    na queda da União Soviética e no fim do confronto.</p>
+
+                <p><strong>Guerra Russo-Georgiana (2008):</strong> A Rússia e a Geórgia entraram em conflito devido à
+                    região separatista da Ossétia do Sul. O conflito durou poucos dias, mas teve impactos significativos
+                    nas relações regionais.</p>
+                    <img src="imagens/fotopb.png" alt="">
+                <p><strong>Anexação da Crimeia (2014):</strong> A Rússia anexou a península da Crimeia após a crise
+                    política na Ucrânia. Isso levou a tensões entre a Rússia e países ocidentais, que não reconheceram a
+                    anexação.</p>
+                <p><strong>Guerra Civil Síria (desde 2011):</strong> Embora não seja um ator inicial, a Rússia se
+                    envolveu na guerra civil síria em apoio ao governo de Bashar al-Assad, alterando significativamente
+                    o curso do conflito.</p>
+                <p><strong>Conflito Russo-Ucraniano (desde 2014):</strong> O conflito na Ucrânia, iniciado em 2014,
+                    envolve confrontos entre forças ucranianas e separatistas apoiados pela Rússia no leste do país. A
+                    anexação da Crimeia pela Rússia e a busca pela independência de regiões como Donetsk e Luhansk têm
+                    causado tensões geopolíticas e humanitárias, resultando em um impasse duradouro e esforços
+                    diplomáticos para alcançar uma resolução pacífica. A situação continua evoluindo e demanda atenção
+                    internacional devido às suas implicações regionais e globais.</p>
+                    <img src="imagens/ucrania.jpg" alt="">
             </div>
         </div>
         <div id="menu-cell">

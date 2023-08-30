@@ -73,6 +73,15 @@ function btnControl() {
         videoControls.style.display = "flex";
         playPauseButtonc.style.display = "flex";
         divVideo.style.zIndex = 100
+        for (let i = 0; i < divTitulos.length; i++) {
+            divTitulos[i].classList.remove("abrir-texto")
+            setTimeout(() => {
+                divInterna[i - 1].style.opacity = 0
+                divTextoH1[i].style.display = "block"
+                divInterna[i - 1].style.display = "none"
+                divTextoH1[i].style.opacity = 1
+            }, 500);
+        }
     }
 }
 
@@ -207,13 +216,13 @@ function next() {
     }
     divSeta1.classList.remove("desativado");
     divSeta1Cell.classList.remove("desativado");
-    for (let i = 0; i < divTitulos.length; i++) {
+    for (let i = 1; i < divTitulos.length; i++) {
         divTitulos[i].classList.remove("abrir-texto")
-        divInterna[i].style.opacity = 0
         divTextoH1[i].style.display = "block"
-        divInterna[i].style.display = "none"
         setTimeout(() => {
             divTextoH1[i].style.opacity = 1
+            divInterna[i - 1].style.opacity = 0
+            divInterna[i - 1].style.display = "none"
         }, 500);
     }
 }
@@ -248,13 +257,13 @@ function prev() {
             divTitulos[i].style.display = "none";
         }
     }
-    for (let i = 0; i < divTitulos.length; i++) {
+    for (let i = 1; i < divTitulos.length; i++) {
         divTitulos[i].classList.remove("abrir-texto")
-        divInterna[i].style.opacity = 0
         divTextoH1[i].style.display = "block"
-        divInterna[i].style.display = "none"
         setTimeout(() => {
             divTextoH1[i].style.opacity = 1
+            divInterna[i - 1].style.display = "none"
+            divInterna[i - 1].style.opacity = 0
         }, 500);
     }
 }
