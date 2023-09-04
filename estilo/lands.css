@@ -157,6 +157,7 @@ img {
 }
 
 #logoMWD {
+    display: block;
     width: 125px;
     margin: 20px;
     position: absolute;
